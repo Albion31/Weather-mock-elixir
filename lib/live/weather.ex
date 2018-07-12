@@ -12,7 +12,6 @@ defmodule Live.Weather do
   end
 
   defp parse_response(response) do
-    # IO.inspect(response)
     %{"weather" => [weather | _other]} =
       response.body
       |> Poison.decode!()
